@@ -1,27 +1,10 @@
+#include "lino_base_config.h"
 #include "Motor.h"
 #include "Encoder.h"
 #include <Wire.h>
 
 
-// These are directly from lino_base_config.h
-#define MOTOR1_IN_A 20
-#define MOTOR1_IN_B 1
-#define MOTOR1_PWM 22
-#define MOTOR2_IN_A 6
-#define MOTOR2_IN_B 8
-#define MOTOR2_PWM 5
-
-#define MOTOR1_ENCODER_A 14
-#define MOTOR1_ENCODER_B 15
-#define MOTOR2_ENCODER_A 12
-#define MOTOR2_ENCODER_B 11
- `
 #define COMMAND_RATE 1     // hz
-#define USE_L298_DRIVER
-#define USE_MPU9250_IMU
-#define MAX_RPM 100              // motor's maximum RPM
-#define COUNTS_PER_REV 3200      // wheel encoder's no of ticks per rev
-#define MOTOR_DRIVER L298
 
 
 void setup()
