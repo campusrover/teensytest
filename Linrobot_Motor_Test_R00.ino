@@ -50,7 +50,7 @@ volatile bool RightEncoderBSet;
 #define Left_Motor_Pin_B 1
 
 //PWM 1 pin number
-#define Left_Motor_PWM 21
+#define Left_Motor_PWM 22
 
 
 //Right Motor
