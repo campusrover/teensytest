@@ -21,7 +21,7 @@
 #define USE_MPU9250_IMU
 #define MAX_RPM 100              // motor's maximum RPM
 #define COUNTS_PER_REV 3200      // wheel encoder's no of ticks per rev
-
+#define MOTOR_DRIVER L298
 
 
 void setup()
