@@ -2,7 +2,7 @@
 
 
 /*
-  #  Linorobot_Motor_Test_Rxx.ino
+  #  Linorobot_Motor_Test_Rxx.ino - Pito
   #
 
   # This program tests the motors for simple operation.  L298N motor drivers are needed
@@ -251,6 +251,4 @@ void moveLeftMotor(float leftServoValue)
     digitalWrite(Left_Motor_Pin_B, HIGH);
 
   }
-
-
 }
