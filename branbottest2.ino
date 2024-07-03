@@ -15,8 +15,13 @@
 #define MOTOR1_ENCODER_B 15
 #define MOTOR2_ENCODER_A 12
 #define MOTOR2_ENCODER_B 11
-
+ `
 #define COMMAND_RATE 1     // hz
+#define USE_L298_DRIVER
+#define USE_MPU9250_IMU
+#define MAX_RPM 100              // motor's maximum RPM
+#define COUNTS_PER_REV 3200      // wheel encoder's no of ticks per rev
+
 
 
 void setup()
