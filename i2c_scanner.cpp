@@ -5,6 +5,8 @@
 
 void setup()
 {
+  Wire.setSDA(SDAPIN);
+  Wire.setSCL(SCLPIN);
   Wire.begin();
 
   Serial.begin(9600);
