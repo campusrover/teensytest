@@ -7,7 +7,9 @@ void setup()
 {
   Serial.begin(9600);
   Serial.println("\nBranbot Test Suite");
-  while (!Serial);             // Leonardo: wait for serial monitor
+  pinMode(18, INPUT_PULLUP);  // Enable pull-up resistor on pin 18
+  pinMode(19, INPUT_PULLUP);  // Enable pull-up resistor on pin 19
+
   Wire.begin();
   Wire.setSDA(18);
   Wire.setSCL(19);

@@ -14,6 +14,8 @@ void setup() {
 
   while (!Serial);
   Serial.println("Begin 9250 Test"); // Add an empty line
+  pinMode(18, INPUT_PULLUP);  // Enable pull-up resistor on pin 18
+  pinMode(19, INPUT_PULLUP);  // Enable pull-up resistor on pin 19
 
 #ifdef _ESP32_HAL_I2C_H_ // For ESP32
   Wire.begin(SDA_PIN, SCL_PIN);
