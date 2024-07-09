@@ -5,13 +5,14 @@
 
 void setup()
 {
-  Wire.setSDA(SDAPIN);
-  Wire.setSCL(SCLPIN);
-  Wire.begin();
-
   Serial.begin(9600);
-  while (!Serial);             // Leonardo: wait for serial monitor
   Serial.println("\nBranbot Test Suite");
+  while (!Serial);             // Leonardo: wait for serial monitor
+  Wire.begin();
+  Wire.setSDA(18);
+  Wire.setSCL(19);
+
+
 }
 
 

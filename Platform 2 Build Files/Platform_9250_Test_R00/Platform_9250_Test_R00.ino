@@ -10,8 +10,10 @@ MPU9250_asukiaaa mySensor;
 float aX, aY, aZ, aSqrt, gX, gY, gZ, mDirection, mX, mY, mZ;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
+
   while (!Serial);
+  Serial.println("Begin 9250 Test"); // Add an empty line
 
 #ifdef _ESP32_HAL_I2C_H_ // For ESP32
   Wire.begin(SDA_PIN, SCL_PIN);
@@ -42,7 +44,7 @@ void loop() {
     Serial.print("accelX: " + String(aX));
     Serial.print("\taccelY: " + String(aY));
     Serial.print("\taccelZ: " + String(aZ));
-  //  Serial.print("\taccelSqrt: " + String(aSqrt));
+    Serial.print("\taccelSqrt: " + String(aSqrt));
   }
 
   if (mySensor.gyroUpdate() == 0) {
@@ -65,17 +67,17 @@ void loop() {
  //   Serial.print("\thorizontalDirection: " + String(mDirection));
   }
 
- // Serial.print("\tTemp: ");
-//  Serial.print(bme.readTemperature());
+  Serial.print("\tTemp: ");
+  Serial.print(bme.readTemperature());
 
-//  Serial.print("\tPress ");
-//  Serial.print(bme.readPressure()/3377);
+  Serial.print("\tPress ");
+  Serial.print(bme.readPressure()/3377);
 
 
- // Serial.print("\tApproxAltitude(m): ");
-//  Serial.print(bme.readAltitude(1013.25)); // this should be adjusted to your local forcase
+   Serial.print("\tApprox Altitude(m): ");
+  Serial.print(bme.readAltitude(1013.25)); // this should be adjusted to your local forcase
 
-  Serial.println(""); // Add an empty line
+  Serial.println("."); // Add an empty line
 
   delay(500);
   }
